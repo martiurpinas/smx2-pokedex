@@ -1,7 +1,252 @@
-    .img-fluid {
-    background-image: center;
-    max-width: 15px;
-    height: auto;
+/* REGLES CSS */
 
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Selector de tipus/element */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    
+    /* Imatge de fons */
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Selector de classe */
+.pagina-pokemon {
+    background-image: url('../images/background-pokemon.jpg');
+}
+
+/* Selector per ID */
+#charmander-page {
+    background-color: #ff6b6b;
+}
+
+/* Capçaleres */
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Títol amb Google Fonts */
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e74c3c;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Contenidor principal */
+.pokedex-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Targetes de Pokémon */
+.pokemon-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    width: 250px;
+}
+
+/* Selector de classe amb pseudo-classe */
+.pokemon-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Enllaços amb imatges */
+.pokemon-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Estils per les imatges */
+.pokemon-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Media query per redimensionar imatges */
+@media (max-width: 768px) {
+    .pokemon-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .pokedex-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemon-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .pokemon-card {
+        width: 200px;
+        padding: 1rem;
+    }
+}
+
+/* Tipus de Pokémon (selectors de classe específics) */
+.tipus-foc {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.tipus-aigua {
+    background-color: #4dabf7;
+    color: white;
+}
+
+.tipus-planta {
+    background-color: #51cf66;
+    color: white;
+}
+
+.pokemon-type {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Enllaços externs */
+.enllas-extern {
+    text-align: center;
+    margin: 2rem 0;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estils pels enllaços amb diferents atributs */
+a[target="_blank"] {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[target="_blank"]:hover {
+    text-decoration: underline;
+}
+
+/* PÀGINES DE POKÉMON INDIVIDUALS */
+.pokemon-detall {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.pokemon-principal {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.pokemon-img-gran {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.numero-pokedex {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.descripcio {
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+/* Evolucions */
+.evolucions-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.evolucio {
+    text-align: center;
+}
+
+.evolucio-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.evolucio-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.evolucio-img:hover {
+    transform: scale(1.1);
+}
+
+/* Botó per tornar */
+.boton-tornar {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.boton-tornar:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 2rem;
 }

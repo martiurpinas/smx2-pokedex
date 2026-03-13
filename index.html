@@ -1,15 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex: Kanto Region</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Charmander - Pokédex</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <h1>Pokedex</h1>
-    <a href="pokedex.html">Pokedex</a>
-    <img src="./images/kanto-map.jpeg" class="img-fluid" alt="Kanto Map">
-    <div id="pokemon-list"></div>
+<body class="pagina-pokemon">
+    
+    <main>
+        <div class="pokemon-detall">
+            <div class="pokemon-principal">
+                <img src="./images/kanto-map.jpeg" alt="Cendaquil" class="pokemon-img-gran">
+                <div class="info-principal">
+                    <p class="numero-pokedex">#004</p>
+                    <p class="tipus tipus-foc">Foc</p>
+                    <p class="descripcio">La cua de Cendaquil crema amb intensitat.</p>
+                </div>
+            </div>
+            
+            <h2>Evolucions</h2>
+            <div class="evolucions-container">
+                <div class="evolucio">
+                    <a href="charmander.html" class="evolucio-link">
+                        <img src="../images/charmander.png" alt="Charmander" class="evolucio-img">
+                        <p>Charmander</p>
+                    </a>
+                </div>
+                <div class="evolucio">
+                    <a href="charmeleon.html" class="evolucio-link">
+                        <img src="../images/charmeleon.png" alt="Charmeleon" class="evolucio-img">
+                        <p>Charmeleon</p>
+                    </a>
+                </div>
+                <div class="evolucio">
+                    <a href="charizard.html" class="evolucio-link">
+                        <img src="../images/charizard.png" alt="Charizard" class="evolucio-img">
+                        <p>Charizard</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

@@ -1,6 +1,7 @@
     .img-fluid {
-    max-width: 100%;
+    background-image: center;
+    max-width: 15px;
     height: auto;
-    align-content: center;    
+
 
 }

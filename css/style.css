@@ -16,7 +16,7 @@ body {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-attachment: fixed;
-    min-height: 100vh;
+    min-height: 32px;
 }
 
 /* Selector de classe */
@@ -54,7 +54,7 @@ header h1 {
     gap: 2rem;
     flex-wrap: wrap;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 36px;
     margin: 0 auto;
 }
 
@@ -83,8 +83,8 @@ header h1 {
 
 /* Estils per les imatges */
 .pokemon-img {
-    width: 150px;
-    height: 150px;
+    width: 136px;
+    height: 136px;
     object-fit: contain;
     margin-bottom: 1rem;
 }

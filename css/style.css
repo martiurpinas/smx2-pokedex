@@ -1,80 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Selector de tipo */
+body{
+    margin:0;
+    font-family: 'Press Start 2P', cursive;
+
+    /* imagen de fondo */
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-body {
-    background: linear-gradient(135deg, #4a90e2, #9013fe);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
+/* selector de tipo */
+header{
+    text-align:center;
+    padding:30px;
 }
 
-.titulo {
-    color: #ffd700;
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-shadow: 3px 3px 0px #4a4a4a;
-    letter-spacing: 2px;
+/* selector de clase */
+.pokedex{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
 
-.contenedor {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+/* selector de tipo */
+img{
+    width:200px;
+    transition: transform 0.3s;
 }
 
-.pokemon {
-    background-color: #f5deb3;
-    padding: 30px 40px;
-    border-radius: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    border: 3px solid #ffd700;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    text-align: center;
+/* efecto hover */
+img:hover{
+    transform: scale(1.1);
 }
 
-.pokemon:hover {
-    transform: scale(1.05);
-    background-color: #ffd700;
-    color: #333;
-}
+/* MEDIA QUERY (responsive) */
 
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 36px;
+@media (max-width:700px){
+
+    img{
+        width:120px;
     }
-    
-    .pokemon {
-        padding: 20px 30px;
-        font-size: 20px;
-    }
-    
-    .contenedor {
-        gap: 20px;
-    }
-}
 
-@media (max-width: 480px) {
-    .titulo {
-        font-size: 28px;
-    }
-    
-    .pokemon {
-        padding: 15px 25px;
-        font-size: 18px;
-        width: 100%;
-        max-width: 250px;
-    }
 }

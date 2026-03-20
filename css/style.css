@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #2c5a2c;
-    font-family: 'Courier New', 'Segoe UI', monospace;
+    background: #2a5e2a;
+    font-family: 'Segoe UI', 'Courier New', monospace;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,148 +16,124 @@ body {
 }
 
 .pokedex {
+    background: #eedbac;
+    border-radius: 55px;
+    padding: 45px 55px 55px 55px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
     max-width: 1100px;
     width: 100%;
-    background: #ecdca8;
-    border-radius: 60px;
-    padding: 45px 55px 55px 55px;
-    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
-    border: 1px solid #c4aa74;
 }
 
 h1 {
     text-align: center;
-    font-size: 62px;
-    color: #e33c2c;
-    text-shadow: 5px 5px 0 #f7d44a;
-    letter-spacing: 6px;
-    margin-bottom: 40px;
-    font-weight: 900;
-    font-family: 'Courier New', monospace;
-}
-
-.map-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 55px;
+    font-size: 58px;
+    color: #dd2e2e;
+    text-shadow: 4px 4px 0 #ffd966;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+    font-weight: 800;
 }
 
 .kanto-map {
-    width: 100%;
-    max-width: 880px;
-    height: 240px;
-    background: #6f9466;
-    border-radius: 32px;
-    border: 5px solid #f7d44a;
-    object-fit: cover;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
     display: block;
+    width: 100%;
+    height: 220px;
+    background: #7e9f6e;
+    border-radius: 28px;
+    border: 5px solid #ffd966;
+    margin-bottom: 45px;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.pokemon-list {
+.pokemon-row {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
-.pokemon-item {
+.pokemon {
     flex: 1;
-    min-width: 170px;
     text-align: center;
-    background: #fff7e8;
-    padding: 28px 20px 22px 20px;
-    border-radius: 48px;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
-    border: 2px solid #e0bc7c;
-    transition: transform 0.2s ease;
+    background: #fef3df;
+    padding: 28px 15px 22px 15px;
+    border-radius: 45px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+    border: 1px solid #cfb274;
 }
 
-.pokemon-item:hover {
-    transform: translateY(-6px);
-}
-
-.pokemon-image {
+.pokemon-sprite {
     width: 140px;
     height: 140px;
-    background: #cfc294;
+    background: #cbbc8c;
     border-radius: 50%;
-    margin: 0 auto 20px auto;
-    border: 4px solid #c7a055;
-    box-shadow: inset 0 0 0 5px #f5e6c4, 0 5px 12px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 18px auto;
+    border: 3px solid #b68b40;
+    box-shadow: inset 0 0 0 5px #f5e5c0;
 }
 
-.pokemon-name {
+.pokemon span {
     display: inline-block;
     font-size: 18px;
-    font-weight: bold;
-    color: #2b4b2b;
+    font-weight: 700;
+    color: #2d562d;
     text-transform: lowercase;
-    background: #f7eaca;
-    padding: 8px 18px;
-    border-radius: 50px;
+    background: #ffefcd;
+    padding: 8px 20px;
+    border-radius: 40px;
     letter-spacing: 1px;
-    font-family: 'Courier New', monospace;
-    border: 1px solid #d8b46c;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
     .pokedex {
-        padding: 35px 35px 45px 35px;
+        padding: 35px 30px 45px 30px;
     }
     
     h1 {
-        font-size: 48px;
+        font-size: 46px;
     }
     
     .kanto-map {
-        height: 200px;
+        height: 180px;
     }
     
-    .pokemon-image {
-        width: 120px;
-        height: 120px;
+    .pokemon-sprite {
+        width: 110px;
+        height: 110px;
     }
     
-    .pokemon-name {
-        font-size: 16px;
+    .pokemon span {
+        font-size: 14px;
     }
     
-    .pokemon-list {
+    .pokemon-row {
         gap: 20px;
     }
 }
 
 @media (max-width: 750px) {
-    .pokemon-list {
+    .pokemon-row {
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 25px;
     }
     
-    .pokemon-item {
-        min-width: 190px;
+    .pokemon {
+        flex: 0 0 calc(50% - 20px);
+        min-width: 180px;
     }
 }
 
-@media (max-width: 600px) {
-    .pokemon-list {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .pokemon-item {
-        width: 240px;
+@media (max-width: 500px) {
+    .pokemon {
+        flex: 0 0 100%;
     }
     
     h1 {
-        font-size: 38px;
+        font-size: 36px;
     }
     
     .kanto-map {
-        height: 160px;
-    }
-    
-    .pokedex {
-        padding: 30px 25px 40px 25px;
+        height: 140px;
     }
 }

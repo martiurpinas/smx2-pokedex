@@ -1,3 +1,4 @@
+/* styles.css */
 * {
     margin: 0;
     padding: 0;
@@ -5,160 +6,158 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a472a 0%, #0e2a1a 100%);
-    font-family: 'Press Start 2P', 'Courier New', monospace;
+    background: #2c5a2c;
+    font-family: 'Courier New', 'Segoe UI', monospace;
     min-height: 100vh;
-    padding: 40px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-body {
-    flex-direction: column;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-header h1 {
-    font-size: 48px;
-    color: #ffde00;
-    text-shadow: 5px 5px 0 #2c5e2c, 3px 3px 0 #000000;
-    letter-spacing: 4px;
-    font-weight: normal;
-    background: #e33535;
-    display: inline-block;
-    padding: 15px 40px;
-    border-radius: 60px;
-    box-shadow: 0 8px 0 #8b0000;
-    transform: translateY(-3px);
-}
-
-.kanto {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    border-radius: 30px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    border: 4px solid #ffde00;
-    background: #2c5e2c;
-    object-fit: cover;
+    padding: 40px;
 }
 
 .pokedex {
+    max-width: 1100px;
+    width: 100%;
+    background: #ecdca8;
+    border-radius: 60px;
+    padding: 45px 55px 55px 55px;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid #c4aa74;
+}
+
+h1 {
+    text-align: center;
+    font-size: 62px;
+    color: #e33c2c;
+    text-shadow: 5px 5px 0 #f7d44a;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-family: 'Courier New', monospace;
+}
+
+.map-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 70px;
-    padding: 35px 25px;
-    backdrop-filter: blur(2px);
+    margin-bottom: 55px;
 }
 
-.pokedex a {
+.kanto-map {
+    width: 100%;
+    max-width: 880px;
+    height: 240px;
+    background: #6f9466;
+    border-radius: 32px;
+    border: 5px solid #f7d44a;
+    object-fit: cover;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    display: block;
+}
+
+.pokemon-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pokemon-item {
+    flex: 1;
+    min-width: 170px;
+    text-align: center;
+    background: #fff7e8;
+    padding: 28px 20px 22px 20px;
+    border-radius: 48px;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+    border: 2px solid #e0bc7c;
     transition: transform 0.2s ease;
-    background: #f8f0e0;
-    padding: 20px 20px 15px 20px;
-    border-radius: 45px;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    border: 3px solid #ffde00;
 }
 
-.pokedex a:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-    border-color: #ffaa00;
+.pokemon-item:hover {
+    transform: translateY(-6px);
 }
 
-.pokedex a img {
+.pokemon-image {
     width: 140px;
     height: 140px;
-    object-fit: contain;
-    filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.2));
-    transition: all 0.2s;
+    background: #cfc294;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: 4px solid #c7a055;
+    box-shadow: inset 0 0 0 5px #f5e6c4, 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
-.pokedex a::after {
-    content: attr(data-name);
-    display: block;
-    margin-top: 12px;
-    font-size: 14px;
-    font-family: 'Press Start 2P', monospace;
-    color: #2c3e50;
-    background: #ffefc0;
-    padding: 6px 12px;
-    border-radius: 30px;
+.pokemon-name {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2b4b2b;
     text-transform: lowercase;
+    background: #f7eaca;
+    padding: 8px 18px;
+    border-radius: 50px;
     letter-spacing: 1px;
-    border: 1px solid #d4a373;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #d8b46c;
 }
 
-.pokedex a:nth-child(1)::after {
-    content: "cindaquill";
-}
-
-.pokedex a:nth-child(2)::after {
-    content: "engar";
-}
-
-.pokedex a:nth-child(3)::after {
-    content: "mew";
-}
-
-.pokedex a:nth-child(4)::after {
-    content: "rayquaza";
-}
-
-/* Ajuste para que en móviles también se vea centrado */
-@media (max-width: 750px) {
-    header h1 {
-        font-size: 32px;
-        padding: 12px 25px;
-    }
-    
+@media (max-width: 950px) {
     .pokedex {
-        gap: 25px;
-        padding: 25px 15px;
+        padding: 35px 35px 45px 35px;
     }
     
-    .pokedex a img {
-        width: 100px;
-        height: 100px;
+    h1 {
+        font-size: 48px;
     }
     
-    .pokedex a::after {
-        font-size: 10px;
+    .kanto-map {
+        height: 200px;
     }
     
-    .kanto {
-        margin-bottom: 30px;
+    .pokemon-image {
+        width: 120px;
+        height: 120px;
     }
-}
-
-@media (max-width: 550px) {
-    .pokedex {
-        flex-direction: column;
-        align-items: center;
+    
+    .pokemon-name {
+        font-size: 16px;
+    }
+    
+    .pokemon-list {
         gap: 20px;
     }
-    
-    .pokedex a {
-        width: 220px;
+}
+
+@media (max-width: 750px) {
+    .pokemon-list {
+        justify-content: center;
+        gap: 25px;
     }
     
-    header h1 {
-        font-size: 26px;
+    .pokemon-item {
+        min-width: 190px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pokemon-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pokemon-item {
+        width: 240px;
+    }
+    
+    h1 {
+        font-size: 38px;
+    }
+    
+    .kanto-map {
+        height: 160px;
+    }
+    
+    .pokedex {
+        padding: 30px 25px 40px 25px;
     }
 }

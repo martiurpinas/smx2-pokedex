@@ -2,36 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Pokedex</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="pokedex">
         <h1>Pokédex</h1>
-    </header>
-    
-    <img src="./images/kanto-map.jpeg" alt="Mapa de Kanto" class="kanto">
-    
-    <main class="pokedex">
-        <!-- Cindaquill -->
-        <a href="./Pokemons/Cindaquill.html" target="_self" data-name="cindaquill">
-            <img src="img/cyndaquil.png" alt="Cyndaquil">
-        </a>
-        <!-- Gengar (engar) -->
-        <a href="./Pokemons/Gengar.html" target="_self" data-name="engar">
-            <img src="img/gengar.png" alt="Gengar">
-        </a>
-        <!-- Mew -->
-        <a href="./Pokemons/Mew.html" target="_self" data-name="mew">
-            <img src="img/mew.png" alt="Mew">
-        </a>
-        <!-- Rayquaza -->
-        <a href="./Pokemons/Rayquaza.html" target="_self" data-name="rayquaza">
-            <img src="img/rayquaza.png" alt="Rayquaza">
-        </a>
-    </main>
+        
+        <div class="map-container">
+            <img src="./images/kanto-map.jpeg" alt="Mapa de Kanto" class="kanto-map">
+        </div>
+        
+        <div class="pokemon-list">
+            <div class="pokemon-item">
+                <div class="pokemon-image"></div>
+                <span class="pokemon-name">cindaquill</span>
+            </div>
+            <div class="pokemon-item">
+                <div class="pokemon-image"></div>
+                <span class="pokemon-name">engar</span>
+            </div>
+            <div class="pokemon-item">
+                <div class="pokemon-image"></div>
+                <span class="pokemon-name">mew</span>
+            </div>
+            <div class="pokemon-item">
+                <div class="pokemon-image"></div>
+                <span class="pokemon-name">rayquaza</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,166 +1,127 @@
-/* style.css */
+/* Configuración Global */
+:root {
+    --pixel-font: 'VT323', monospace;
+    --text-shadow: 3px 3px 0px #000;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background: linear-gradient(135deg, #1a472a 0%, #0e2a1a 100%);
-    font-family: 'Press Start 2P', 'Courier New', monospace;
-    min-height: 100vh;
-    padding: 40px 20px;
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    font-family: var(--pixel-font);
+    overflow: hidden;
+}
+
+/* Contenedor Principal con el Mapa de Johto */
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('index.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 10px solid #222; /* Marco exterior */
+}
+
+/* Header: Título en el centro superior */
+.pokedex-header {
+    width: 100%;
+    position: absolute;
+    top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    z-index: 10;
 }
 
-
-body {
-    flex-direction: column;
+.header-content {
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #4a4a4a;
+    border-radius: 15px;
+    padding: 5px 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-header h1 {
-    font-size: 48px;
-    color: #ffde00;
-    text-shadow: 5px 5px 0 #2c5e2c, 3px 3px 0 #000000;
+.header-content h1 {
+    color: #fff;
+    font-size: 55px;
+    text-transform: uppercase;
     letter-spacing: 4px;
-    font-weight: normal;
-    background: #e33535;
-    display: inline-block;
-    padding: 15px 40px;
-    border-radius: 60px;
-    box-shadow: 0 8px 0 #8b0000;
-    transform: translateY(-3px);
+    text-shadow: var(--text-shadow);
 }
 
-.kanto {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    border-radius: 30px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    border: 4px solid #ffde00;
-    background: #2c5e2c;
-    object-fit: cover;
-}
-
-.pokedex {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 70px;
-    padding: 35px 25px;
-    backdrop-filter: blur(2px);
-}
-
-.pokedex a {
+/* Sidebar: Alineación izquierda (Pokédex + Lista) */
+.interface-sidebar {
+    position: absolute;
+    top: 100px;
+    left: 40px;
     display: flex;
     flex-direction: column;
+    width: 320px;
+    z-index: 5;
+}
+
+/* Pokédex: Recorte preciso de la imagen original */
+.pokedex-visual {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.pokedex-crop {
+    width: 280px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.pokedex-img {
+    width: 1300px; /* Ajuste de escala para el recorte */
+    margin-left: -5px;
+    margin-top: -30px;
+    filter: saturate(1.2) contrast(1.1);
+}
+
+/* Lista de Pokémon: Estética GameBoy */
+.pokemon-nav {
+    padding-left: 20px;
+}
+
+.pokemon-list {
+    list-style: none;
+}
+
+.pokemon-item {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 5px;
+    display: flex;
     align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-    background: #f8f0e0;
-    padding: 20px 20px 15px 20px;
-    border-radius: 45px;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    border: 3px solid #ffde00;
-}
-
-.pokedex a:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-    border-color: #ffaa00;
-}
-
-.pokedex a img {
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-    filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.2));
-    transition: all 0.2s;
-}
-
-.pokedex a::after {
-    content: attr(data-name);
-    display: block;
-    margin-top: 12px;
-    font-size: 14px;
-    font-family: 'Press Start 2P', monospace;
-    color: #2c3e50;
-    background: #ffefc0;
-    padding: 6px 12px;
-    border-radius: 30px;
     text-transform: lowercase;
-    letter-spacing: 1px;
-    border: 1px solid #d4a373;
+    text-shadow: var(--text-shadow);
+    transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
-.pokedex a:nth-child(1)::after {
-    content: "cindaquill";
+.pokemon-item:hover {
+    transform: translateX(10px);
+    color: #ffcb05; /* Amarillo Pokémon al pasar el mouse */
 }
 
-.pokedex a:nth-child(2)::after {
-    content: "engar";
-}
-
-.pokedex a:nth-child(3)::after {
-    content: "mew";
-}
-
-.pokedex a:nth-child(4)::after {
-    content: "rayquaza";
-}
-
-/* Ajuste para que en móviles también se vea centrado */
-@media (max-width: 750px) {
-    header h1 {
-        font-size: 32px;
-        padding: 12px 25px;
-    }
-    
-    .pokedex {
-        gap: 25px;
-        padding: 25px 15px;
-    }
-    
-    .pokedex a img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .pokedex a::after {
-        font-size: 10px;
-    }
-    
-    .kanto {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 550px) {
-    .pokedex {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    .pokedex a {
-        width: 220px;
-    }
-    
-    header h1 {
-        font-size: 26px;
-    }
+/* Marcador (Punto negro) */
+.marker {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
 }

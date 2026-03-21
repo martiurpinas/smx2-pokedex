@@ -27,7 +27,7 @@ flex kanto map {
 .app-container kanto-map {
     width: 100vw;
     height: 100vh;
-    background-image: url('./images/kanto-map.jpg');
+    background-image: url ('./images/kanto-map.jpg');
     background-size: cover;
     background-position: center;
     position: relative;

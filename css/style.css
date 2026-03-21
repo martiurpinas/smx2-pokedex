@@ -17,8 +17,14 @@ body, html {
     overflow: hidden;
 }
 
-/* Contenedor del mapa */
-.app-container {
+/* Contenedor para kanto - map*/
+flex kanto map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container kanto-map {
     width: 100vw;
     height: 100vh;
     background-image: url('./images/kanto-map.jpg');

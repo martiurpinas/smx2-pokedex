@@ -18,15 +18,16 @@ body, html {
 }
 
 /* Contenedor para kanto - map*/
-flex kanto map {
+.flex kanto map {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 100%;
 }
 
 .app-container kanto-map {
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     background-image: url ('./images/kanto-map.jpg');
     background-size: cover;
     background-position: center;

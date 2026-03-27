@@ -17,7 +17,7 @@ html, body {
     overflow: hidden;
 }   
 
-/*Titulo principal de la página de inicio */
+/* Titulo principal de la página de inicio */
 .titulo {
     text-align: center;
     color: white;
@@ -31,7 +31,7 @@ html, body {
     height: 100vh;
 }
 
-/*Estilos para la imagen de la pokedex y la lista de los pokemons */
+/* Estilos para la imagen de la pokedex y la lista de los pokemons */
 .lado-izquierdo {
     width: 300px;
     padding: 20px;

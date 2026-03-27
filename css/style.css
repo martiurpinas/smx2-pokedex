@@ -1,10 +1,10 @@
+/* Estilos generales para la página de inicio */
 .index {
     margin: 0;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-
     background-image: url("../images/kanto-map.jpeg");
     background-size: cover;
     background-position: center;
@@ -17,6 +17,7 @@ html, body {
     overflow: hidden;
 }   
 
+/*Titulo principal de la página de inicio */
 .titulo {
     text-align: center;
     color: white;

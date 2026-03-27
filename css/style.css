@@ -31,7 +31,7 @@ html, body {
     height: 100vh;
 }
 
-
+/*Estilos para la imagen de la pokedex y la lista de los pokemons */
 .lado-izquierdo {
     width: 300px;
     padding: 20px;
@@ -44,7 +44,7 @@ html, body {
 }
 
 
-.lista a{
+.lista a {
     list-style: none;
     padding: 0;
 }
@@ -72,11 +72,13 @@ html, body {
     font-style: normal;
 }
 
+/* Estilos para las imágenes de los pokemons */
 #foto-gengar, #foto-cindaquill, #foto-mew, #foto-rayquaza {
     width: 300px;
     height: auto;
 }
 
+/* Estilos para los títulos de los pokemons */
 .titulo-gengar, .titulo-cindaquill, .titulo-mew, .titulo-rayquaza {
     text-align: center;
     color: black;
@@ -96,6 +98,7 @@ html, body {
     margin-top: 20px;
 }
 
+/* Estilos para las listas de las evoluciones de los pokemons */
 .lista-gengar a, .lista-cindaquill a, .lista-mew a, .lista-rayquaza a {
     color: black;
     text-decoration: none;
